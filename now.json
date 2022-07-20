@@ -1,0 +1,8 @@
+{
+  "name": "react-typescript",
+  "version": 2,
+  "public": true,
+  "github": {
+    "autoJobCancelation": false
+  }
+}

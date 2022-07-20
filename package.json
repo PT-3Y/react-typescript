@@ -1,0 +1,123 @@
+{
+  "name": "smith-react-typescript",
+  "version": "0.3.13",
+  "license": "MIT",
+  "author": "John smith <jsmith052199@gmail.com",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "template.json",
+  "description": "A quick start Create React App template with React Router, Redux, TypeScript, Enzyme and custom ESlint configurations",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "enzyme",
+    "eslint",
+    "redux",
+    "react-redux",
+    "react-router",
+    "react-router-dom",
+    "typescript",
+    "prettier"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Smith0521/react-typescript",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/Smith0521/react-typescript"
+  },
+  "dependencies": {
+    "@types/enzyme": "^3.10.4",
+    "@types/jest": "^27.0.0",
+    "@types/node": "^14.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/redux-mock-store": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "5.9.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.0",
+    "enzyme": "^3.11.0",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "prettier": "^2.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "5.0.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4",
+    "typescript": "~4.5.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean-files": "rm -rf ./template/public ./template/src && rm -f ./template/.eslintignore ./template/.eslintrc ./template/.prettierrc ./template/README.md ./template/README_CRA.md ./template/tsconfig.json ./template/tsconfig.eslint.json",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public && cp .eslintignore .eslintrc .prettierrc tsconfig.json tsconfig.eslint.json README.md README_CRA.md template/",
+    "prepublishOnly": "yarn clean-files && yarn copy-files",
+    "commit": "npx git-cz",
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "fix": "eslint src --ext .js,.jsx,.ts,.tsx  --fix",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "e2e": "cypress run --spec 'cypress/integration/*'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest",
+    "access": "public"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      ">0.3%",
+      "not ie 11",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.2",
+    "codecov": "3.8.3",
+    "commitizen": "4.2.4",
+    "cypress": "9.4.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint-plugin-cypress": "2.12.1",
+    "semantic-release": "18.0.1"
+  }
+}
